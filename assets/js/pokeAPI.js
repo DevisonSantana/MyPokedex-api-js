@@ -12,6 +12,10 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.type = type
 
     pokemon.photo = pokeDetail.sprites.versions["generation-v"]["black-white"]["animated"].front_default
+    ||
+    pokeDetail.sprites.other["official-artwork"].front_default
+    ||
+    pokeDetail.sprites.other.home.front_default
 
     return pokemon
 }
